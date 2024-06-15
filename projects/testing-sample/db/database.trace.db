@@ -1,0 +1,347 @@
+2024-06-15 21:18:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TARGET_TABLE" not found (this database is empty); SQL statement:
+SELECT * FROM public.target_table [42104-210]
+2024-06-15 21:18:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TARGET_TABLE" not found (this database is empty); SQL statement:
+SELECT * FROM public.target_table [42104-210]
+2024-06-15 21:18:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TARGET_TABLE" not found (this database is empty); SQL statement:
+SELECT * FROM public.target_table [42104-210]
+2024-06-15 21:18:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TARGET_TABLE" not found (this database is empty); SQL statement:
+SELECT 1 FROM public.target_table [42104-210]
+2024-06-15 21:19:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "T" not found (this database is empty); SQL statement:
+SELECT * FROM public.t [42104-210]
+2024-06-15 21:19:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TA" not found (this database is empty); SQL statement:
+SELECT * FROM public.ta [42104-210]
+2024-06-15 21:19:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "T" not found (this database is empty); SQL statement:
+SELECT * FROM public.t [42104-210]
+2024-06-15 21:19:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "T" not found (this database is empty); SQL statement:
+SELECT * FROM public.T [42104-210]
+2024-06-15 21:19:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TA" not found (this database is empty); SQL statement:
+SELECT * FROM public.TA [42104-210]
+2024-06-15 21:19:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TAR" not found (this database is empty); SQL statement:
+SELECT * FROM public.TAR [42104-210]
+2024-06-15 21:19:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TARG" not found (this database is empty); SQL statement:
+SELECT * FROM public.TARG [42104-210]
+2024-06-15 21:19:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TARGE" not found (this database is empty); SQL statement:
+SELECT * FROM public.TARGE [42104-210]
+2024-06-15 21:19:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TARGET" not found (this database is empty); SQL statement:
+SELECT * FROM public.TARGET [42104-210]
+2024-06-15 21:19:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TARGET_" not found (this database is empty); SQL statement:
+SELECT * FROM public.TARGET_ [42104-210]
+2024-06-15 21:19:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TARGET_T" not found (this database is empty); SQL statement:
+SELECT * FROM public.TARGET_T [42104-210]
+2024-06-15 21:19:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TARGET_TA" not found (this database is empty); SQL statement:
+SELECT * FROM public.TARGET_TA [42104-210]
+2024-06-15 21:19:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TARGET_TAB" not found (this database is empty); SQL statement:
+SELECT * FROM public.TARGET_TAB [42104-210]
+2024-06-15 21:19:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TARGET_TABL" not found (this database is empty); SQL statement:
+SELECT * FROM public.TARGET_TABL [42104-210]
+2024-06-15 21:19:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TARGET_TABLE" not found (this database is empty); SQL statement:
+SELECT * FROM public.TARGET_TABLE [42104-210]
+2024-06-15 21:19:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "P" not found; SQL statement:
+SELECT * FROM P.TARGET_TABLE [90079-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:651)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1836)
+	at org.h2.command.Parser.readTableReference(Parser.java:2342)
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2793)
+	at org.h2.command.Parser.parseSelect(Parser.java:2900)
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2783)
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2650)
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2629)
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2622)
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2615)
+	at org.h2.command.Parser.parseQuery(Parser.java:2576)
+	at org.h2.command.Parser.parsePrepared(Parser.java:707)
+	at org.h2.command.Parser.parse(Parser.java:674)
+	at org.h2.command.Parser.parse(Parser.java:644)
+	at org.h2.command.Parser.prepareCommand(Parser.java:551)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:615)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:553)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288)
+	at org.pentaho.di.core.database.Database.getQueryFieldsFallback(Database.java:2539)
+	at org.pentaho.di.core.database.Database.getQueryFields(Database.java:2420)
+	at org.pentaho.di.core.database.Database.getQueryFields(Database.java:1873)
+	at org.pentaho.di.core.database.Database.getTableFieldsMeta(Database.java:2293)
+	at org.pentaho.di.ui.trans.steps.tableoutput.TableOutputDialog$26.run(TableOutputDialog.java:1117)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.pentaho.di.ui.trans.steps.tableoutput.TableOutputDialog.open(TableOutputDialog.java:888)
+	at org.pentaho.di.ui.spoon.delegates.SpoonStepsDelegate.editStep(SpoonStepsDelegate.java:120)
+	at org.pentaho.di.ui.spoon.Spoon.editStep(Spoon.java:8871)
+	at org.pentaho.di.ui.spoon.trans.TransGraph.editStep(TransGraph.java:3287)
+	at org.pentaho.di.ui.spoon.trans.TransGraph.mouseDoubleClick(TransGraph.java:785)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:200)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4209)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4026)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.pentaho.di.ui.spoon.Spoon.readAndDispatch(Spoon.java:1421)
+	at org.pentaho.di.ui.spoon.Spoon.waitForDispose(Spoon.java:8006)
+	at org.pentaho.di.ui.spoon.Spoon.start(Spoon.java:9388)
+	at org.pentaho.di.ui.spoon.Spoon.main(Spoon.java:711)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.pentaho.commons.launcher.Launcher.main(Launcher.java:92)
+2024-06-15 21:19:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "PU" not found; SQL statement:
+SELECT * FROM PU.TARGET_TABLE [90079-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:651)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1836)
+	at org.h2.command.Parser.readTableReference(Parser.java:2342)
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2793)
+	at org.h2.command.Parser.parseSelect(Parser.java:2900)
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2783)
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2650)
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2629)
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2622)
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2615)
+	at org.h2.command.Parser.parseQuery(Parser.java:2576)
+	at org.h2.command.Parser.parsePrepared(Parser.java:707)
+	at org.h2.command.Parser.parse(Parser.java:674)
+	at org.h2.command.Parser.parse(Parser.java:644)
+	at org.h2.command.Parser.prepareCommand(Parser.java:551)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:615)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:553)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288)
+	at org.pentaho.di.core.database.Database.getQueryFieldsFallback(Database.java:2539)
+	at org.pentaho.di.core.database.Database.getQueryFields(Database.java:2420)
+	at org.pentaho.di.core.database.Database.getQueryFields(Database.java:1873)
+	at org.pentaho.di.core.database.Database.getTableFieldsMeta(Database.java:2293)
+	at org.pentaho.di.ui.trans.steps.tableoutput.TableOutputDialog$26.run(TableOutputDialog.java:1117)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.pentaho.di.ui.trans.steps.tableoutput.TableOutputDialog.open(TableOutputDialog.java:888)
+	at org.pentaho.di.ui.spoon.delegates.SpoonStepsDelegate.editStep(SpoonStepsDelegate.java:120)
+	at org.pentaho.di.ui.spoon.Spoon.editStep(Spoon.java:8871)
+	at org.pentaho.di.ui.spoon.trans.TransGraph.editStep(TransGraph.java:3287)
+	at org.pentaho.di.ui.spoon.trans.TransGraph.mouseDoubleClick(TransGraph.java:785)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:200)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4209)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4026)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.pentaho.di.ui.spoon.Spoon.readAndDispatch(Spoon.java:1421)
+	at org.pentaho.di.ui.spoon.Spoon.waitForDispose(Spoon.java:8006)
+	at org.pentaho.di.ui.spoon.Spoon.start(Spoon.java:9388)
+	at org.pentaho.di.ui.spoon.Spoon.main(Spoon.java:711)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.pentaho.commons.launcher.Launcher.main(Launcher.java:92)
+2024-06-15 21:19:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "PUB" not found; SQL statement:
+SELECT * FROM PUB.TARGET_TABLE [90079-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:651)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1836)
+	at org.h2.command.Parser.readTableReference(Parser.java:2342)
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2793)
+	at org.h2.command.Parser.parseSelect(Parser.java:2900)
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2783)
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2650)
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2629)
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2622)
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2615)
+	at org.h2.command.Parser.parseQuery(Parser.java:2576)
+	at org.h2.command.Parser.parsePrepared(Parser.java:707)
+	at org.h2.command.Parser.parse(Parser.java:674)
+	at org.h2.command.Parser.parse(Parser.java:644)
+	at org.h2.command.Parser.prepareCommand(Parser.java:551)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:615)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:553)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288)
+	at org.pentaho.di.core.database.Database.getQueryFieldsFallback(Database.java:2539)
+	at org.pentaho.di.core.database.Database.getQueryFields(Database.java:2420)
+	at org.pentaho.di.core.database.Database.getQueryFields(Database.java:1873)
+	at org.pentaho.di.core.database.Database.getTableFieldsMeta(Database.java:2293)
+	at org.pentaho.di.ui.trans.steps.tableoutput.TableOutputDialog$26.run(TableOutputDialog.java:1117)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.pentaho.di.ui.trans.steps.tableoutput.TableOutputDialog.open(TableOutputDialog.java:888)
+	at org.pentaho.di.ui.spoon.delegates.SpoonStepsDelegate.editStep(SpoonStepsDelegate.java:120)
+	at org.pentaho.di.ui.spoon.Spoon.editStep(Spoon.java:8871)
+	at org.pentaho.di.ui.spoon.trans.TransGraph.editStep(TransGraph.java:3287)
+	at org.pentaho.di.ui.spoon.trans.TransGraph.mouseDoubleClick(TransGraph.java:785)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:200)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4209)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4026)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.pentaho.di.ui.spoon.Spoon.readAndDispatch(Spoon.java:1421)
+	at org.pentaho.di.ui.spoon.Spoon.waitForDispose(Spoon.java:8006)
+	at org.pentaho.di.ui.spoon.Spoon.start(Spoon.java:9388)
+	at org.pentaho.di.ui.spoon.Spoon.main(Spoon.java:711)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.pentaho.commons.launcher.Launcher.main(Launcher.java:92)
+2024-06-15 21:19:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "PUBL" not found; SQL statement:
+SELECT * FROM PUBL.TARGET_TABLE [90079-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:651)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1836)
+	at org.h2.command.Parser.readTableReference(Parser.java:2342)
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2793)
+	at org.h2.command.Parser.parseSelect(Parser.java:2900)
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2783)
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2650)
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2629)
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2622)
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2615)
+	at org.h2.command.Parser.parseQuery(Parser.java:2576)
+	at org.h2.command.Parser.parsePrepared(Parser.java:707)
+	at org.h2.command.Parser.parse(Parser.java:674)
+	at org.h2.command.Parser.parse(Parser.java:644)
+	at org.h2.command.Parser.prepareCommand(Parser.java:551)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:615)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:553)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288)
+	at org.pentaho.di.core.database.Database.getQueryFieldsFallback(Database.java:2539)
+	at org.pentaho.di.core.database.Database.getQueryFields(Database.java:2420)
+	at org.pentaho.di.core.database.Database.getQueryFields(Database.java:1873)
+	at org.pentaho.di.core.database.Database.getTableFieldsMeta(Database.java:2293)
+	at org.pentaho.di.ui.trans.steps.tableoutput.TableOutputDialog$26.run(TableOutputDialog.java:1117)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.pentaho.di.ui.trans.steps.tableoutput.TableOutputDialog.open(TableOutputDialog.java:888)
+	at org.pentaho.di.ui.spoon.delegates.SpoonStepsDelegate.editStep(SpoonStepsDelegate.java:120)
+	at org.pentaho.di.ui.spoon.Spoon.editStep(Spoon.java:8871)
+	at org.pentaho.di.ui.spoon.trans.TransGraph.editStep(TransGraph.java:3287)
+	at org.pentaho.di.ui.spoon.trans.TransGraph.mouseDoubleClick(TransGraph.java:785)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:200)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4209)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4026)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.pentaho.di.ui.spoon.Spoon.readAndDispatch(Spoon.java:1421)
+	at org.pentaho.di.ui.spoon.Spoon.waitForDispose(Spoon.java:8006)
+	at org.pentaho.di.ui.spoon.Spoon.start(Spoon.java:9388)
+	at org.pentaho.di.ui.spoon.Spoon.main(Spoon.java:711)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.pentaho.commons.launcher.Launcher.main(Launcher.java:92)
+2024-06-15 21:19:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "PUBLI" not found; SQL statement:
+SELECT * FROM PUBLI.TARGET_TABLE [90079-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:651)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1836)
+	at org.h2.command.Parser.readTableReference(Parser.java:2342)
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2793)
+	at org.h2.command.Parser.parseSelect(Parser.java:2900)
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2783)
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2650)
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2629)
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2622)
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2615)
+	at org.h2.command.Parser.parseQuery(Parser.java:2576)
+	at org.h2.command.Parser.parsePrepared(Parser.java:707)
+	at org.h2.command.Parser.parse(Parser.java:674)
+	at org.h2.command.Parser.parse(Parser.java:644)
+	at org.h2.command.Parser.prepareCommand(Parser.java:551)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:615)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:553)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288)
+	at org.pentaho.di.core.database.Database.getQueryFieldsFallback(Database.java:2539)
+	at org.pentaho.di.core.database.Database.getQueryFields(Database.java:2420)
+	at org.pentaho.di.core.database.Database.getQueryFields(Database.java:1873)
+	at org.pentaho.di.core.database.Database.getTableFieldsMeta(Database.java:2293)
+	at org.pentaho.di.ui.trans.steps.tableoutput.TableOutputDialog$26.run(TableOutputDialog.java:1117)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.pentaho.di.ui.trans.steps.tableoutput.TableOutputDialog.open(TableOutputDialog.java:888)
+	at org.pentaho.di.ui.spoon.delegates.SpoonStepsDelegate.editStep(SpoonStepsDelegate.java:120)
+	at org.pentaho.di.ui.spoon.Spoon.editStep(Spoon.java:8871)
+	at org.pentaho.di.ui.spoon.trans.TransGraph.editStep(TransGraph.java:3287)
+	at org.pentaho.di.ui.spoon.trans.TransGraph.mouseDoubleClick(TransGraph.java:785)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:200)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4209)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4026)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.pentaho.di.ui.spoon.Spoon.readAndDispatch(Spoon.java:1421)
+	at org.pentaho.di.ui.spoon.Spoon.waitForDispose(Spoon.java:8006)
+	at org.pentaho.di.ui.spoon.Spoon.start(Spoon.java:9388)
+	at org.pentaho.di.ui.spoon.Spoon.main(Spoon.java:711)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.pentaho.commons.launcher.Launcher.main(Launcher.java:92)
+2024-06-15 21:19:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TARGET_TABLE" not found (this database is empty); SQL statement:
+SELECT * FROM PUBLIC.TARGET_TABLE [42104-210]
+2024-06-15 21:19:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TARGET_TABLE" not found (this database is empty); SQL statement:
+SELECT 1 FROM PUBLIC.TARGET_TABLE [42104-210]
+2024-06-15 21:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "DROP TABLE IF EXISTS PUBLIC.TARGET_TABLE\000a[*]CREATE TABLE PUBLIC.TARGET_TABLE\000a(\000a  STATUS VARCHAR(15)\000a, CNT_STATUS BIGINT\000a, LOAD_TIME TIMESTAMP\000a)"; SQL statement:
+DROP TABLE IF EXISTS PUBLIC.TARGET_TABLE
+CREATE TABLE PUBLIC.TARGET_TABLE
+(
+  STATUS VARCHAR(15)
+, CNT_STATUS BIGINT
+, LOAD_TIME TIMESTAMP
+) [42000-210]

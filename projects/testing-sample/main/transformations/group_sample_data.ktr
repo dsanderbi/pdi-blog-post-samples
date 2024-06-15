@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>select_sample_data</name>
+    <name>group_sample_data</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
     </parameters>
@@ -430,7 +431,7 @@
     <created_date>2024/06/15 14:06:51.628</created_date>
     <modified_user>-</modified_user>
     <modified_date>2024/06/15 14:06:51.628</modified_date>
-    <key_for_session_key/>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -498,10 +499,212 @@
       </attribute>
     </attributes>
   </connection>
+  <connection>
+    <name>trg_con</name>
+    <server/>
+    <type>GENERIC</type>
+    <access>Native</access>
+    <database/>
+    <port>1521</port>
+    <username>${TRG_CON_USER_NAME}</username>
+    <password>${TRG_CON_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>CUSTOM_DRIVER_CLASS</code>
+        <attribute>${TRG_CON_CLASS}</attribute>
+      </attribute>
+      <attribute>
+        <code>CUSTOM_URL</code>
+        <attribute>${TRG_CON_URL}</attribute>
+      </attribute>
+      <attribute>
+        <code>DATABASE_DIALECT_ID</code>
+        <attribute>Generic database</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1521</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
   <order>
+    <hop>
+      <from>ti-ORDERS</from>
+      <to>sr-STATUS</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>sr-STATUS</from>
+      <to>grp-STATUS</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>grp-STATUS</from>
+      <to>gsi-LOAD_TIME</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>gsi-LOAD_TIME</from>
+      <to>to-TARGET_TABLE</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <step>
-    <name>Table input</name>
+    <name>grp-STATUS</name>
+    <type>GroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <all_rows>N</all_rows>
+    <ignore_aggregate>N</ignore_aggregate>
+    <field_ignore/>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>grp</prefix>
+    <add_linenr>N</add_linenr>
+    <linenr_fieldname/>
+    <give_back_row>N</give_back_row>
+    <group>
+      <field>
+        <name>STATUS</name>
+      </field>
+    </group>
+    <fields>
+      <field>
+        <aggregate>CNT_STATUS</aggregate>
+        <subject>STATUS</subject>
+        <type>COUNT_ALL</type>
+        <valuefield/>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>gsi-LOAD_TIME</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>LOAD_TIME</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>528</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>sr-STATUS</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>STATUS</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>ti-ORDERS</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -526,7 +729,7 @@
         <name>ORDERNUMBER</name>
         <length>9</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>ti-ORDERS</origin>
         <comments>ORDERNUMBER</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -549,7 +752,7 @@
         <name>ORDERDATE</name>
         <length>6</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>ti-ORDERS</origin>
         <comments>ORDERDATE</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -572,7 +775,7 @@
         <name>REQUIREDDATE</name>
         <length>6</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>ti-ORDERS</origin>
         <comments>REQUIREDDATE</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -595,7 +798,7 @@
         <name>SHIPPEDDATE</name>
         <length>6</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>ti-ORDERS</origin>
         <comments>SHIPPEDDATE</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -618,7 +821,7 @@
         <name>STATUS</name>
         <length>15</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>ti-ORDERS</origin>
         <comments>STATUS</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -641,7 +844,7 @@
         <name>COMMENTS</name>
         <length>1048576</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>ti-ORDERS</origin>
         <comments>COMMENTS</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -664,7 +867,7 @@
         <name>CUSTOMERNUMBER</name>
         <length>9</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>ti-ORDERS</origin>
         <comments>CUSTOMERNUMBER</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -692,6 +895,62 @@
     </remotesteps>
     <GUI>
       <xloc>96</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>to-TARGET_TABLE</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>trg_con</connection>
+    <schema>PUBLIC</schema>
+    <table>TARGET_TABLE</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>STATUS</column_name>
+        <stream_name>STATUS</stream_name>
+      </field>
+      <field>
+        <column_name>CNT_STATUS</column_name>
+        <stream_name>CNT_STATUS</stream_name>
+      </field>
+      <field>
+        <column_name>LOAD_TIME</column_name>
+        <stream_name>LOAD_TIME</stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
       <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
