@@ -1,0 +1,3 @@
+/projects/testing-sample/configs/.kettle/*
+!/projects/testing-sample/configs/.kettle/kettle.properties
+!/projects/testing-sample/configs/.kettle/shared.xml
