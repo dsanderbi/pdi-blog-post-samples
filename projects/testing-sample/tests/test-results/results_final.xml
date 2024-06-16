@@ -1,4 +1,4 @@
-<testsuite name="Test Suite Batch ID ${V_BATCH_ID}" tests="2" failures="0" skipped="0" errors="0">
+<testsuite name="Test Suite Batch ID " tests="2" failures="0" skipped="0" errors="0">
 <testcase name="group_sample_data Test" classname="group_sample_data" package="to-TARGET_TABLE" time="0.0"><system-out><![CDATA[Test passed succesfully against golden data set]]></system-out></testcase>
 <testcase name="select_from_trg_table Test" classname="select_from_trg_table" package="Write to log" time="0.0"><system-out><![CDATA[Test passed succesfully against golden data set]]></system-out></testcase>
 </testsuite>
