@@ -1,8 +1,6 @@
 <test-set>
-  <test name="person_data Test 1"
+  <test name="group_sample_data Test"
     />
-  <test name="person_data Test 2"
+  <test name="select_from_trg_table Test"
     />
-  <test name="car_data Test 1"
-    />
-  </test-set>
+</test-set>
