@@ -1,0 +1,5 @@
+<testsuite name="Test Suite Batch ID ${V_BATCH_ID}" tests="3" failures="1" skipped="0" errors="0">
+<testcase name="person_data Test 1" classname="person_data" package="Select values" time="0.0"><system-out><![CDATA[Test passed succesfully against golden data set]]></system-out></testcase>
+<testcase name="person_data Test 2" classname="person_data" package="Select values" time="0.0"><failure type="type" message="ERROR Found" /><system-out><![CDATA[Validation againt golden data failed for row number 5: step value [H] does not correspond to data set value [Hs]]]></system-out></testcase>
+<testcase name="car_data Test 1" classname="car_data" package="Dummy (do nothing)" time="0.0"><system-out><![CDATA[Test passed succesfully against golden data set]]></system-out></testcase>
+</testsuite>

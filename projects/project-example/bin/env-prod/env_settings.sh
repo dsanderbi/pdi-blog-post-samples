@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# ************************************************
+# ** Add your production configuration here     **
+# ************************************************
+
+# ************************************************
+# **           SET PENTAHO_JAVA_HOME            ** 
+# ************************************************
+export PENTAHO_JAVA_HOME=
+echo "- PENTAHO_JAVA_HOME=$PENTAHO_JAVA_HOME"
+
+# ************************************************
+# **           SET PATH TO DATA-INTEGRATION     ** 
+# ************************************************
+export PDI_HOME=
+echo "- PDI_HOME=$PDI_HOME"
+
+# ************************************************
+# **           SET Xms || SET Xmx               ** 
+# ************************************************
+export PENTAHO_DI_JAVA_OPTIONS="-Xms4096m -Xmx8192m"
+echo "- PENTAHO_DI_JAVA_OPTIONS=$PENTAHO_DI_JAVA_OPTIONS"
