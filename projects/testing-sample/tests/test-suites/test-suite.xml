@@ -1,6 +1,0 @@
-<test-set>
-  <test name="group_sample_data Test"
-    />
-  <test name="select_from_trg_table Test"
-    />
-</test-set>
