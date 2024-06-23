@@ -438,16 +438,6 @@
   <order>
     <hop>
       <from>Generate rows</from>
-      <to>Add XML</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Add XML</from>
-      <to>Add XML 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Add XML 2</from>
       <to>Write to log</to>
       <enabled>Y</enabled>
     </hop>
@@ -477,7 +467,7 @@
         <set_empty_string>N</set_empty_string>
       </field>
     </fields>
-    <limit>10</limit>
+    <limit>1</limit>
     <never_ending>N</never_ending>
     <interval_in_ms>5000</interval_in_ms>
     <row_time_field>now</row_time_field>
@@ -523,75 +513,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>528</xloc>
-      <yloc>144</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Add XML</name>
-    <type>AddXML</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <encoding>UTF-8</encoding>
-    <valueName>xmlvaluename</valueName>
-    <xml_repeat_element>Row</xml_repeat_element>
-    <file>
-      <omitXMLheader>Y</omitXMLheader>
-      <omitNullValues>N</omitNullValues>
-    </file>
-    <fields>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>336</xloc>
-      <yloc>144</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Add XML 2</name>
-    <type>AddXML</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <encoding>UTF-8</encoding>
-    <valueName>xmlvaluename</valueName>
-    <xml_repeat_element>Row</xml_repeat_element>
-    <file>
-      <omitXMLheader>Y</omitXMLheader>
-      <omitNullValues>N</omitNullValues>
-    </file>
-    <fields>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>432</xloc>
+      <xloc>416</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>

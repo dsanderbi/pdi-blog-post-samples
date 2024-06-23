@@ -314,11 +314,28 @@
       <type>WRITE_TO_LOG</type>
       <attributes/>
       <logmessage>
-## SETTINGS ##
+## PROJECT SETTINGS ##
+
+PROJECT_HOME: ${PROJECT_HOME}
+
+## KETTLE VARIABLES ##
+
+TRG_DB_CON.URL=${TRG_DB_CON.URL}
+TRG_DB_CON.CLASS=${TRG_DB_CON.CLASS}
+TRG_DB_CON.USER=${TRG_DB_CON.USER}
+TRG_DB_CON.PASSWORD=${TRG_DB_CON.PASSWORD}
+TRG_DB_CON.STMT=${TRG_DB_CON.STMT}
+
+SRC_DB_CON.URL=${SRC_DB_CON.URL}
+SRC_DB_CON.CLASS=${SRC_DB_CON.CLASS}
+SRC_DB_CON.USER=${SRC_DB_CON.USER}
+SRC_DB_CON.PASSWORD=${SRC_DB_CON.PASSWORD}
+SRC_DB_CON.STMT=${SRC_DB_CON.STMT}
 
 PROJECT_VAR1: ${PROJECT_VAR1}
 
-PROJECT_HOME: ${PROJECT_HOME}</logmessage>
+...
+...</logmessage>
       <loglevel>Basic</loglevel>
       <logsubject>wtl-PDI-SETTINGS</logsubject>
       <parallel>N</parallel>
@@ -361,7 +378,7 @@ PROJECT_HOME: ${PROJECT_HOME}</logmessage>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>352</xloc>
+      <xloc>320</xloc>
       <yloc>128</yloc>
       <attributes_kjc/>
     </entry>
