@@ -1,0 +1,5 @@
+# Set Windows line endings for .bat files
+*.bat text eol=crlf
+
+# Set Unix line endings for .sh files
+*.sh text eol=lf
