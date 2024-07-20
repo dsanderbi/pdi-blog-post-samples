@@ -19,5 +19,5 @@ echo - PDI_HOME=%PDI_HOME%
 rem ************************************************
 rem **           SET Xms || SET Xmx               ** 
 rem ************************************************
-set PENTAHO_DI_JAVA_OPTIONS=-Xms10g -Xmx20g
+set PENTAHO_DI_JAVA_OPTIONS=-Xms10g -Xmx20g -Dfile.encoding=UTF-8
 echo - PENTAHO_DI_JAVA_OPTIONS= %PENTAHO_DI_JAVA_OPTIONS%
