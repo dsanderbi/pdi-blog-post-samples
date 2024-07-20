@@ -13,9 +13,22 @@ set PROJECT_HOME=%CURRENT_DIR%\..
 echo - PROJECT_HOME=%PROJECT_HOME%
 
 rem ************************************************
+rem **           SET PENTAHO_METASTORE_FOLDER     ** 
+rem **           SET DATASETS_BASE_PATH           ** 
+rem **           SET UNIT_TESTS_BASE_PATH         ** 
+rem ************************************************
+set PENTAHO_METASTORE_FOLDER=%PROJECT_HOME%\tests
+set DATASETS_BASE_PATH=%PROJECT_HOME%\tests\datasets
+set UNIT_TESTS_BASE_PATH=%PROJECT_HOME%\main
+
+echo - PENTAHO_METASTORE_FOLDER=%PENTAHO_METASTORE_FOLDER%
+echo - DATASETS_BASE_PATH=%DATASETS_BASE_PATH%
+echo - UNIT_TESTS_BASE_PATH=%UNIT_TESTS_BASE_PATH%
+
+rem ************************************************
 rem **           SET OPT                          ** 
 rem ************************************************
-set OPT=-DPROJECT_HOME="%PROJECT_HOME%"
+set OPT=-DPROJECT_HOME="%PROJECT_HOME%" -DPENTAHO_METASTORE_FOLDER="%PENTAHO_METASTORE_FOLDER%" -DDATASETS_BASE_PATH="%DATASETS_BASE_PATH%" -DUNIT_TESTS_BASE_PATH="%UNIT_TESTS_BASE_PATH%"
 echo - OPT=%OPT%
 
 rem ************************************************

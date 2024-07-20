@@ -13,9 +13,22 @@ export PROJECT_HOME=$(dirname "$CURRENT_DIR")
 echo "- PROJECT_HOME=$PROJECT_HOME"
 
 # ************************************************
+# **           SET PENTAHO_METASTORE_FOLDER     ** 
+# **           SET DATASETS_BASE_PATH           ** 
+# **           SET UNIT_TESTS_BASE_PATH         ** 
+# ************************************************
+export PENTAHO_METASTORE_FOLDER=$PROJECT_HOME/tests
+export DATASETS_BASE_PATH=$PROJECT_HOME/tests/datasets
+export UNIT_TESTS_BASE_PATH=$PROJECT_HOME/main
+
+echo "PENTAHO_METASTORE_FOLDER=$PENTAHO_METASTORE_FOLDER"
+echo "DATASETS_BASE_PATH=$DATASETS_BASE_PATH"
+echo "UNIT_TESTS_BASE_PATH=$UNIT_TESTS_BASE_PATH"
+
+# ************************************************
 # **           SET OPT                          ** 
 # ************************************************
-export OPT="$OPT -DPROJECT_HOME=$PROJECT_HOME"
+export OPT="$OPT -DPROJECT_HOME=$PROJECT_HOME -DPENTAHO_METASTORE_FOLDER=$PENTAHO_METASTORE_FOLDER -DDATASETS_BASE_PATH=$DATASETS_BASE_PATH -DUNIT_TESTS_BASE_PATH=$UNIT_TESTS_BASE_PATH"
 echo "- OPT=$OPT"
 
 # ************************************************
